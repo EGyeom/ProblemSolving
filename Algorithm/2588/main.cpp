@@ -11,5 +11,4 @@ int main()
 		temp /= 10;
 	}
 	std::cout << N1 * N2 << "\n";
-
 }
