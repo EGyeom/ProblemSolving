@@ -66,5 +66,9 @@ int main()
 			}
 		}
 	}
+	if (check == 0)
+	{
+		std::cout << 0 << std::endl;
+	}
 
 }
