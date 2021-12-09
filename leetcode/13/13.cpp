@@ -20,12 +20,71 @@ I can be placed before V (5) and X (10) to make 4 and 9.
 X can be placed before L (50) and C (100) to make 40 and 90. 
 C can be placed before D (500) and M (1000) to make 400 and 900.
 Given a roman numeral, convert it to an integer. */
+#include <iostream>
+#include <string>
+#include <cstdio>
 
+using namespace std;
 
 class Solution {
 public:
     int romanToInt(string s) {
-        int length = s.size();
-        for(int i = 1 ; i < length)    
+        auto iter = s.begin();
+        int ans = 0;
+        while(iter != s.end())
+        {
+            int current = stringToInt(*iter);
+            int next = 0;
+            if((iter+1) != s.end())
+            {
+                next = stringToInt(*(iter+1));
+            }
+            if(current >= next)
+            {
+                ans += current;
+            }
+            else
+            {
+                ans += next- current;
+                ++iter;
+            }
+            ++iter;
+        }
+        return ans;
+    }
+
+    int stringToInt(char c)
+    {
+        switch(c)
+        {
+            case 'I':
+            return 1;
+            break;
+            case 'V':
+            return 5;
+            break;
+            case 'X':
+            return 10;
+            break;
+            case 'L':
+            return 50;
+            break;
+            case 'C':
+            return 100;
+            break;
+            case 'D':
+            return 500;
+            break;
+            case 'M':
+            return 1000;
+            break;
+        }
+        return 0;
     }
 };
+
+int main()
+{
+    Solution s;
+    printf("%d\n",s.romanToInt("I"));
+}
