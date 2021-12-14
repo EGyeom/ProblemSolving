@@ -83,13 +83,13 @@ void printMap(int mapSizeY, int mapSizeX, std::vector<std::vector<int> >& map_)
 
 void TurnLeft(POSITON& pos_)
 {
-    pos_.dir += 1;
-    if(pos_.dir == 4) pos_.dir = 0;
+    pos_.dir -= 1;
+    if(pos_.dir < 0) pos_.dir = 3;
 }
 
 bool goStraight(POSITON& pos_, std::vector<std::vector<int> >& map_)
 {
-    printf("x : %d y : %d dir : %d\n", pos_.x, pos_.y, pos_.dir);
+    printf("go Straight x : %d y : %d dir : %d\n", pos_.x, pos_.y, pos_.dir);
     int dx = pos_.x, dy = pos_.y;
     switch (pos_.dir)
     {
@@ -120,6 +120,38 @@ bool goStraight(POSITON& pos_, std::vector<std::vector<int> >& map_)
         return true;
     }
 }
+bool goBack(POSITON& pos_, std::vector<std::vector<int> >& map_)
+{
+    printf("go back x : %d y : %d dir : %d\n", pos_.x, pos_.y, pos_.dir);
+    int dx = pos_.x, dy = pos_.y;
+    switch (pos_.dir)
+    {
+    case UP:
+        dy = pos_.y + 1;
+        break;
+    case RIGHT:
+        dx = pos_.x - 1;
+        break;
+    case DOWN:
+        dy = pos_.y - 1;
+        break;
+    case LEFT:
+        dx = pos_.x + 1;
+        break;
+    }
+    if(map_[dy][dx] == 1)
+    {
+        return false;
+    }
+    else
+    {   
+        pos_.x = dx;
+        pos_.y = dy;
+        map_[pos_.y][pos_.x] = 2;
+        TurnLeft(pos_);
+        return true;
+    }
+}
 
 
 int main()
@@ -130,6 +162,7 @@ int main()
     scanf("%d %d %d %d %d", &mapSizeY,&mapSizeX,&initY,&initX,&initDir);
     std::vector<std::vector<int> > map(mapSizeY,std::vector<int>(mapSizeX,0));
     POSITON pos = {initX,initY,initDir};
+    int ans = 0;
     for(int i = 0; i < mapSizeY; i++)
     {
         for(int j =0; j < mapSizeX; j++)
@@ -144,13 +177,17 @@ int main()
         system("clear");
         printMap(mapSizeY,mapSizeX,map);
         int count = 0;
+        ans++;
         while(!goStraight(pos,map))
         {
             count++;
             if(count == 4)
             {
-                isExit = true;
-                break;
+                if(!goBack(pos,map))
+                {
+                    isExit = true;
+                    break;
+                }
             }
         }
     }
