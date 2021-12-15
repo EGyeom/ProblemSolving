@@ -48,6 +48,20 @@ c는 서쪽으로 부터 떨어진 칸의 개수이다.
 1 0 0 0 0 0 0 0 0 1
 1 1 1 1 1 1 1 1 1 1
 
+11 10
+7 4 0
+1 1 1 1 1 1 1 1 1 1
+1 0 0 0 0 0 0 0 0 1
+1 0 0 0 1 1 1 1 0 1
+1 0 0 1 1 0 0 0 0 1
+1 0 1 1 0 0 0 0 0 1
+1 0 0 0 0 0 0 0 0 1
+1 0 0 0 0 0 0 1 0 1
+1 0 0 0 0 0 1 1 0 1
+1 0 0 0 0 0 1 1 0 1
+1 0 0 0 0 0 0 0 0 1
+1 1 1 1 1 1 1 1 1 1
+
 57
  */
 #include <iostream>
@@ -124,6 +138,8 @@ bool goBack(POSITON& pos_, std::vector<std::vector<int> >& map_)
 {
     printf("go back x : %d y : %d dir : %d\n", pos_.x, pos_.y, pos_.dir);
     int dx = pos_.x, dy = pos_.y;
+    pos_.dir += 1;
+    if(pos_.dir == 4) pos_.dir = 0;
     switch (pos_.dir)
     {
     case UP:
@@ -171,12 +187,13 @@ int main()
         }
     }
     map[initY][initX] = 2;
+    TurnLeft(pos);
     while(!isExit)
     {
-        sleep(1);
-        system("clear");
-        printMap(mapSizeY,mapSizeX,map);
+        // sleep(1);
+        // system("clear");
         int count = 0;
+        printMap(mapSizeY,mapSizeX,map);
         ans++;
         while(!goStraight(pos,map))
         {
@@ -188,7 +205,9 @@ int main()
                     isExit = true;
                     break;
                 }
+                count =0 ;
             }
         }
     }
+    printf("%d\n", ans);
 }
