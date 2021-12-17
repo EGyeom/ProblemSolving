@@ -8,6 +8,8 @@ OBJS = $(SRCS:.cpp=.o)
 
 DEPS = $(SRCS:.cpp=.d)
 
+INC = -I/backup/save/ProblemSolving/
+
 TARGET = main
 
 all: main
@@ -19,7 +21,7 @@ $(TARGET) : ${OBJS}
 	echo $(SRCS)
 	echo $(OBJS)
 	echo $(DEPS)
-	$(CC) $(CXXFLAGS) $(OBJS) -o $(TARGET) $(LDFLAGS)
+	$(CC) $(CXXFLAGS) $(OBJS) -o $(TARGET) $(INC) $(LDFLAGS)
 	make clean
 
 .PHONY: clean all
