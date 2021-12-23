@@ -1,0 +1,1297 @@
+blocking 0 0
+1
+1 1 1 1 
+1 1 0 0 
+1 0 1 0 
+1 0 0 1 
+
+traversal : 0 0
+blocking 1 2
+2
+1 2 2 2 
+2 2 1 1 
+1 1 2 1 
+2 0 1 1 
+
+traversal : 1 2
+blocking 3 1
+3
+1 3 2 2 
+2 3 1 2 
+2 2 3 1 
+3 1 2 2 
+
+traversal : 3 1
+unblocking 3 1
+3
+1 2 2 2 
+2 2 1 1 
+1 1 2 1 
+2 0 1 1 
+
+unblocking 1 2
+2
+1 1 1 1 
+1 1 0 0 
+1 0 1 0 
+1 0 0 1 
+
+blocking 1 3
+2
+1 1 2 2 
+2 2 1 1 
+1 0 2 1 
+1 1 0 2 
+
+traversal : 1 3
+blocking 2 1
+3
+1 2 2 3 
+3 3 2 1 
+2 1 3 2 
+2 2 1 2 
+
+traversal : 2 1
+unblocking 2 1
+3
+1 1 2 2 
+2 2 1 1 
+1 0 2 1 
+1 1 0 2 
+
+blocking 3 2
+3
+1 1 3 2 
+3 2 2 1 
+1 1 3 2 
+2 2 1 3 
+
+traversal : 3 2
+unblocking 3 2
+3
+1 1 2 2 
+2 2 1 1 
+1 0 2 1 
+1 1 0 2 
+
+unblocking 1 3
+2
+1 1 1 1 
+1 1 0 0 
+1 0 1 0 
+1 0 0 1 
+
+blocking 2 1
+2
+1 2 1 2 
+2 2 1 0 
+2 1 2 1 
+2 1 1 1 
+
+traversal : 2 1
+unblocking 2 1
+2
+1 1 1 1 
+1 1 0 0 
+1 0 1 0 
+1 0 0 1 
+
+blocking 2 3
+2
+1 2 1 2 
+1 1 1 1 
+2 1 2 1 
+1 0 1 2 
+
+traversal : 2 3
+blocking 3 1
+3
+1 3 1 2 
+1 2 1 2 
+3 2 3 1 
+2 1 2 3 
+
+traversal : 3 1
+unblocking 3 1
+3
+1 2 1 2 
+1 1 1 1 
+2 1 2 1 
+1 0 1 2 
+
+unblocking 2 3
+2
+1 1 1 1 
+1 1 0 0 
+1 0 1 0 
+1 0 0 1 
+
+blocking 3 1
+2
+1 2 1 1 
+1 2 0 1 
+2 1 2 0 
+2 1 1 2 
+
+traversal : 3 1
+unblocking 3 1
+2
+1 1 1 1 
+1 1 0 0 
+1 0 1 0 
+1 0 0 1 
+
+blocking 3 2
+2
+1 1 2 1 
+2 1 1 0 
+1 1 2 1 
+2 1 1 2 
+
+traversal : 3 2
+unblocking 3 2
+2
+1 1 1 1 
+1 1 0 0 
+1 0 1 0 
+1 0 0 1 
+
+unblocking 0 0
+1
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+
+blocking 0 1
+1
+1 1 1 1 
+1 1 1 0 
+0 1 0 1 
+0 1 0 0 
+
+traversal : 0 1
+blocking 1 3
+2
+1 1 2 2 
+2 2 2 1 
+0 1 1 2 
+0 2 0 1 
+
+traversal : 1 3
+blocking 2 0
+3
+2 1 3 2 
+3 3 2 1 
+1 2 2 3 
+1 3 0 1 
+
+traversal : 2 0
+blocking 3 2
+4
+2 1 4 2 
+4 3 3 1 
+1 3 3 4 
+2 4 1 2 
+
+traversal : 3 2
+result : 1
+unblocking 3 2
+4
+2 1 3 2 
+3 3 2 1 
+1 2 2 3 
+1 3 0 1 
+
+unblocking 2 0
+3
+1 1 2 2 
+2 2 2 1 
+0 1 1 2 
+0 2 0 1 
+
+blocking 3 0
+3
+2 1 2 3 
+3 2 3 1 
+1 2 1 2 
+1 3 1 2 
+
+traversal : 3 0
+unblocking 3 0
+3
+1 1 2 2 
+2 2 2 1 
+0 1 1 2 
+0 2 0 1 
+
+blocking 3 2
+3
+1 1 3 2 
+3 2 3 1 
+0 2 2 3 
+1 3 1 2 
+
+traversal : 3 2
+unblocking 3 2
+3
+1 1 2 2 
+2 2 2 1 
+0 1 1 2 
+0 2 0 1 
+
+unblocking 1 3
+2
+1 1 1 1 
+1 1 1 0 
+0 1 0 1 
+0 1 0 0 
+
+blocking 2 0
+2
+2 1 2 1 
+2 2 1 0 
+1 2 1 2 
+1 2 0 0 
+
+traversal : 2 0
+blocking 3 2
+3
+2 1 3 1 
+3 2 2 0 
+1 3 2 3 
+2 3 1 1 
+
+traversal : 3 2
+unblocking 3 2
+3
+2 1 2 1 
+2 2 1 0 
+1 2 1 2 
+1 2 0 0 
+
+blocking 3 3
+3
+3 1 2 2 
+2 3 1 1 
+1 2 2 3 
+2 3 1 1 
+
+traversal : 3 3
+unblocking 3 3
+3
+2 1 2 1 
+2 2 1 0 
+1 2 1 2 
+1 2 0 0 
+
+unblocking 2 0
+2
+1 1 1 1 
+1 1 1 0 
+0 1 0 1 
+0 1 0 0 
+
+blocking 2 2
+2
+2 1 2 1 
+1 2 2 1 
+1 2 1 2 
+0 2 1 1 
+
+traversal : 2 2
+blocking 3 0
+3
+3 1 2 2 
+2 2 3 1 
+2 3 1 2 
+1 3 2 2 
+
+traversal : 3 0
+unblocking 3 0
+3
+2 1 2 1 
+1 2 2 1 
+1 2 1 2 
+0 2 1 1 
+
+unblocking 2 2
+2
+1 1 1 1 
+1 1 1 0 
+0 1 0 1 
+0 1 0 0 
+
+blocking 3 0
+2
+2 1 1 2 
+2 1 2 0 
+1 2 0 1 
+1 2 1 1 
+
+traversal : 3 0
+unblocking 3 0
+2
+1 1 1 1 
+1 1 1 0 
+0 1 0 1 
+0 1 0 0 
+
+blocking 3 2
+2
+1 1 2 1 
+2 1 2 0 
+0 2 1 2 
+1 2 1 1 
+
+traversal : 3 2
+unblocking 3 2
+2
+1 1 1 1 
+1 1 1 0 
+0 1 0 1 
+0 1 0 0 
+
+blocking 3 3
+2
+2 1 1 2 
+1 2 1 1 
+0 1 1 2 
+1 2 1 1 
+
+traversal : 3 3
+unblocking 3 3
+2
+1 1 1 1 
+1 1 1 0 
+0 1 0 1 
+0 1 0 0 
+
+unblocking 0 1
+1
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+
+blocking 0 2
+1
+1 1 1 1 
+0 1 1 1 
+1 0 1 0 
+0 0 1 0 
+
+traversal : 0 2
+blocking 1 0
+2
+2 2 1 1 
+1 2 2 2 
+2 1 1 0 
+1 0 2 0 
+
+traversal : 1 0
+blocking 2 3
+3
+2 3 1 2 
+1 2 3 3 
+3 2 2 1 
+1 0 3 1 
+
+traversal : 2 3
+blocking 3 1
+4
+2 4 1 2 
+1 3 3 4 
+4 3 3 1 
+2 1 4 2 
+
+traversal : 3 1
+result : 2
+unblocking 3 1
+4
+2 3 1 2 
+1 2 3 3 
+3 2 2 1 
+1 0 3 1 
+
+unblocking 2 3
+3
+2 2 1 1 
+1 2 2 2 
+2 1 1 0 
+1 0 2 0 
+
+blocking 3 1
+3
+2 3 1 1 
+1 3 2 3 
+3 2 2 0 
+2 1 3 1 
+
+traversal : 3 1
+unblocking 3 1
+3
+2 2 1 1 
+1 2 2 2 
+2 1 1 0 
+1 0 2 0 
+
+blocking 3 3
+3
+3 2 1 2 
+1 3 2 3 
+2 1 2 1 
+2 1 3 1 
+
+traversal : 3 3
+unblocking 3 3
+3
+2 2 1 1 
+1 2 2 2 
+2 1 1 0 
+1 0 2 0 
+
+unblocking 1 0
+2
+1 1 1 1 
+0 1 1 1 
+1 0 1 0 
+0 0 1 0 
+
+blocking 2 1
+2
+1 2 1 2 
+1 2 2 1 
+2 1 2 1 
+1 1 2 0 
+
+traversal : 2 1
+blocking 3 3
+3
+2 2 1 3 
+1 3 2 2 
+2 1 3 2 
+2 2 3 1 
+
+traversal : 3 3
+unblocking 3 3
+3
+1 2 1 2 
+1 2 2 1 
+2 1 2 1 
+1 1 2 0 
+
+unblocking 2 1
+2
+1 1 1 1 
+0 1 1 1 
+1 0 1 0 
+0 0 1 0 
+
+blocking 2 3
+2
+1 2 1 2 
+0 1 2 2 
+2 1 2 1 
+0 0 2 1 
+
+traversal : 2 3
+blocking 3 0
+3
+2 2 1 3 
+1 1 3 2 
+3 2 2 1 
+1 1 3 2 
+
+traversal : 3 0
+unblocking 3 0
+3
+1 2 1 2 
+0 1 2 2 
+2 1 2 1 
+0 0 2 1 
+
+blocking 3 1
+3
+1 3 1 2 
+0 2 2 3 
+3 2 3 1 
+1 1 3 2 
+
+traversal : 3 1
+unblocking 3 1
+3
+1 2 1 2 
+0 1 2 2 
+2 1 2 1 
+0 0 2 1 
+
+unblocking 2 3
+2
+1 1 1 1 
+0 1 1 1 
+1 0 1 0 
+0 0 1 0 
+
+blocking 3 0
+2
+2 1 1 2 
+1 1 2 1 
+2 1 1 0 
+1 1 2 1 
+
+traversal : 3 0
+unblocking 3 0
+2
+1 1 1 1 
+0 1 1 1 
+1 0 1 0 
+0 0 1 0 
+
+blocking 3 1
+2
+1 2 1 1 
+0 2 1 2 
+2 1 2 0 
+1 1 2 1 
+
+traversal : 3 1
+unblocking 3 1
+2
+1 1 1 1 
+0 1 1 1 
+1 0 1 0 
+0 0 1 0 
+
+blocking 3 3
+2
+2 1 1 2 
+0 2 1 2 
+1 0 2 1 
+1 1 2 1 
+
+traversal : 3 3
+unblocking 3 3
+2
+1 1 1 1 
+0 1 1 1 
+1 0 1 0 
+0 0 1 0 
+
+unblocking 0 2
+1
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+
+blocking 0 3
+1
+1 1 1 1 
+0 0 1 1 
+0 1 0 1 
+1 0 0 1 
+
+traversal : 0 3
+blocking 1 0
+2
+2 2 1 1 
+1 1 2 2 
+1 2 0 1 
+2 0 1 1 
+
+traversal : 1 0
+blocking 2 2
+3
+3 2 2 1 
+1 2 3 3 
+2 3 1 2 
+2 1 2 2 
+
+traversal : 2 2
+unblocking 2 2
+3
+2 2 1 1 
+1 1 2 2 
+1 2 0 1 
+2 0 1 1 
+
+blocking 3 1
+3
+2 3 1 1 
+1 2 2 3 
+2 3 1 1 
+3 1 2 2 
+
+traversal : 3 1
+unblocking 3 1
+3
+2 2 1 1 
+1 1 2 2 
+1 2 0 1 
+2 0 1 1 
+
+unblocking 1 0
+2
+1 1 1 1 
+0 0 1 1 
+0 1 0 1 
+1 0 0 1 
+
+blocking 1 1
+2
+2 2 2 1 
+1 1 2 2 
+1 2 1 1 
+1 1 0 2 
+
+traversal : 1 1
+blocking 3 2
+3
+2 2 3 1 
+2 1 3 2 
+1 3 2 2 
+2 2 1 3 
+
+traversal : 3 2
+unblocking 3 2
+3
+2 2 2 1 
+1 1 2 2 
+1 2 1 1 
+1 1 0 2 
+
+unblocking 1 1
+2
+1 1 1 1 
+0 0 1 1 
+0 1 0 1 
+1 0 0 1 
+
+blocking 2 0
+2
+2 1 2 1 
+1 1 1 1 
+1 2 1 2 
+2 1 0 1 
+
+traversal : 2 0
+blocking 3 2
+3
+2 1 3 1 
+2 1 2 1 
+1 3 2 3 
+3 2 1 2 
+
+traversal : 3 2
+unblocking 3 2
+3
+2 1 2 1 
+1 1 1 1 
+1 2 1 2 
+2 1 0 1 
+
+unblocking 2 0
+2
+1 1 1 1 
+0 0 1 1 
+0 1 0 1 
+1 0 0 1 
+
+blocking 2 2
+2
+2 1 2 1 
+0 1 2 2 
+1 2 1 2 
+1 1 1 2 
+
+traversal : 2 2
+unblocking 2 2
+2
+1 1 1 1 
+0 0 1 1 
+0 1 0 1 
+1 0 0 1 
+
+blocking 3 1
+2
+1 2 1 1 
+0 1 1 2 
+1 2 1 1 
+2 1 1 2 
+
+traversal : 3 1
+unblocking 3 1
+2
+1 1 1 1 
+0 0 1 1 
+0 1 0 1 
+1 0 0 1 
+
+blocking 3 2
+2
+1 1 2 1 
+1 0 2 1 
+0 2 1 2 
+2 1 1 2 
+
+traversal : 3 2
+unblocking 3 2
+2
+1 1 1 1 
+0 0 1 1 
+0 1 0 1 
+1 0 0 1 
+
+unblocking 0 3
+1
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+
+blocking 1 0
+1
+1 1 0 0 
+1 1 1 1 
+1 1 0 0 
+1 0 1 0 
+
+traversal : 1 0
+blocking 2 2
+2
+2 1 1 0 
+1 2 2 2 
+2 2 1 1 
+1 1 2 1 
+
+traversal : 2 2
+unblocking 2 2
+2
+1 1 0 0 
+1 1 1 1 
+1 1 0 0 
+1 0 1 0 
+
+blocking 2 3
+2
+1 2 0 1 
+1 1 2 2 
+2 2 1 1 
+1 0 2 1 
+
+traversal : 2 3
+blocking 3 1
+3
+1 3 0 1 
+1 2 2 3 
+3 3 2 1 
+2 1 3 2 
+
+traversal : 3 1
+unblocking 3 1
+3
+1 2 0 1 
+1 1 2 2 
+2 2 1 1 
+1 0 2 1 
+
+unblocking 2 3
+2
+1 1 0 0 
+1 1 1 1 
+1 1 0 0 
+1 0 1 0 
+
+blocking 3 1
+2
+1 2 0 0 
+1 2 1 2 
+2 2 1 0 
+2 1 2 1 
+
+traversal : 3 1
+unblocking 3 1
+2
+1 1 0 0 
+1 1 1 1 
+1 1 0 0 
+1 0 1 0 
+
+blocking 3 3
+2
+2 1 0 1 
+1 2 1 2 
+1 1 1 1 
+2 1 2 1 
+
+traversal : 3 3
+unblocking 3 3
+2
+1 1 0 0 
+1 1 1 1 
+1 1 0 0 
+1 0 1 0 
+
+unblocking 1 0
+1
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+
+blocking 1 1
+1
+1 1 1 0 
+1 1 1 1 
+1 1 1 0 
+0 1 0 1 
+
+traversal : 1 1
+blocking 2 3
+2
+1 2 1 1 
+1 1 2 2 
+2 2 2 1 
+0 1 1 2 
+
+traversal : 2 3
+blocking 3 0
+3
+2 2 1 2 
+2 1 3 2 
+3 3 2 1 
+1 2 2 3 
+
+traversal : 3 0
+unblocking 3 0
+3
+1 2 1 1 
+1 1 2 2 
+2 2 2 1 
+0 1 1 2 
+
+unblocking 2 3
+2
+1 1 1 0 
+1 1 1 1 
+1 1 1 0 
+0 1 0 1 
+
+blocking 3 0
+2
+2 1 1 1 
+2 1 2 1 
+2 2 1 0 
+1 2 1 2 
+
+traversal : 3 0
+unblocking 3 0
+2
+1 1 1 0 
+1 1 1 1 
+1 1 1 0 
+0 1 0 1 
+
+blocking 3 2
+2
+1 1 2 0 
+2 1 2 1 
+1 2 2 1 
+1 2 1 2 
+
+traversal : 3 2
+unblocking 3 2
+2
+1 1 1 0 
+1 1 1 1 
+1 1 1 0 
+0 1 0 1 
+
+unblocking 1 1
+1
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+
+blocking 1 2
+1
+0 1 1 1 
+1 1 1 1 
+0 1 1 1 
+1 0 1 0 
+
+traversal : 1 2
+blocking 2 0
+2
+1 1 2 1 
+2 2 1 1 
+1 2 2 2 
+2 1 1 0 
+
+traversal : 2 0
+blocking 3 3
+3
+2 1 2 2 
+2 3 1 2 
+1 2 3 3 
+3 2 2 1 
+
+traversal : 3 3
+unblocking 3 3
+3
+1 1 2 1 
+2 2 1 1 
+1 2 2 2 
+2 1 1 0 
+
+unblocking 2 0
+2
+0 1 1 1 
+1 1 1 1 
+0 1 1 1 
+1 0 1 0 
+
+blocking 3 1
+2
+0 2 1 1 
+1 2 1 2 
+1 2 2 1 
+2 1 2 1 
+
+traversal : 3 1
+unblocking 3 1
+2
+0 1 1 1 
+1 1 1 1 
+0 1 1 1 
+1 0 1 0 
+
+blocking 3 3
+2
+1 1 1 2 
+1 2 1 2 
+0 1 2 2 
+2 1 2 1 
+
+traversal : 3 3
+unblocking 3 3
+2
+0 1 1 1 
+1 1 1 1 
+0 1 1 1 
+1 0 1 0 
+
+unblocking 1 2
+1
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+
+blocking 1 3
+1
+0 0 1 1 
+1 1 1 1 
+0 0 1 1 
+0 1 0 1 
+
+traversal : 1 3
+blocking 2 0
+2
+1 0 2 1 
+2 2 1 1 
+1 1 2 2 
+1 2 0 1 
+
+traversal : 2 0
+blocking 3 2
+3
+1 0 3 1 
+3 2 2 1 
+1 2 3 3 
+2 3 1 2 
+
+traversal : 3 2
+unblocking 3 2
+3
+1 0 2 1 
+2 2 1 1 
+1 1 2 2 
+1 2 0 1 
+
+unblocking 2 0
+2
+0 0 1 1 
+1 1 1 1 
+0 0 1 1 
+0 1 0 1 
+
+blocking 2 1
+2
+0 1 1 2 
+2 2 2 1 
+1 1 2 2 
+1 2 1 1 
+
+traversal : 2 1
+unblocking 2 1
+2
+0 0 1 1 
+1 1 1 1 
+0 0 1 1 
+0 1 0 1 
+
+blocking 3 0
+2
+1 0 1 2 
+2 1 2 1 
+1 1 1 1 
+1 2 1 2 
+
+traversal : 3 0
+unblocking 3 0
+2
+0 0 1 1 
+1 1 1 1 
+0 0 1 1 
+0 1 0 1 
+
+blocking 3 2
+2
+0 0 2 1 
+2 1 2 1 
+0 1 2 2 
+1 2 1 2 
+
+traversal : 3 2
+unblocking 3 2
+2
+0 0 1 1 
+1 1 1 1 
+0 0 1 1 
+0 1 0 1 
+
+unblocking 1 3
+1
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+
+blocking 2 0
+1
+1 0 1 0 
+1 1 0 0 
+1 1 1 1 
+1 1 0 0 
+
+traversal : 2 0
+blocking 3 2
+2
+1 0 2 0 
+2 1 1 0 
+1 2 2 2 
+2 2 1 1 
+
+traversal : 3 2
+unblocking 3 2
+2
+1 0 1 0 
+1 1 0 0 
+1 1 1 1 
+1 1 0 0 
+
+blocking 3 3
+2
+2 0 1 1 
+1 2 0 1 
+1 1 2 2 
+2 2 1 1 
+
+traversal : 3 3
+unblocking 3 3
+2
+1 0 1 0 
+1 1 0 0 
+1 1 1 1 
+1 1 0 0 
+
+unblocking 2 0
+1
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+
+blocking 2 1
+1
+0 1 0 1 
+1 1 1 0 
+1 1 1 1 
+1 1 1 0 
+
+traversal : 2 1
+blocking 3 3
+2
+1 1 0 2 
+1 2 1 1 
+1 1 2 2 
+2 2 2 1 
+
+traversal : 3 3
+unblocking 3 3
+2
+0 1 0 1 
+1 1 1 0 
+1 1 1 1 
+1 1 1 0 
+
+unblocking 2 1
+1
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+
+blocking 2 2
+1
+1 0 1 0 
+0 1 1 1 
+1 1 1 1 
+0 1 1 1 
+
+traversal : 2 2
+blocking 3 0
+2
+2 0 1 1 
+1 1 2 1 
+2 2 1 1 
+1 2 2 2 
+
+traversal : 3 0
+unblocking 3 0
+2
+1 0 1 0 
+0 1 1 1 
+1 1 1 1 
+0 1 1 1 
+
+unblocking 2 2
+1
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+
+blocking 2 3
+1
+0 1 0 1 
+0 0 1 1 
+1 1 1 1 
+0 0 1 1 
+
+traversal : 2 3
+blocking 3 0
+2
+1 1 0 2 
+1 0 2 1 
+2 2 1 1 
+1 1 2 2 
+
+traversal : 3 0
+unblocking 3 0
+2
+0 1 0 1 
+0 0 1 1 
+1 1 1 1 
+0 0 1 1 
+
+blocking 3 1
+2
+0 2 0 1 
+0 1 1 2 
+2 2 2 1 
+1 1 2 2 
+
+traversal : 3 1
+unblocking 3 1
+2
+0 1 0 1 
+0 0 1 1 
+1 1 1 1 
+0 0 1 1 
+
+unblocking 2 3
+1
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+
+blocking 3 0
+1
+1 0 0 1 
+1 0 1 0 
+1 1 0 0 
+1 1 1 1 
+
+traversal : 3 0
+unblocking 3 0
+1
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+
+blocking 3 1
+1
+0 1 0 0 
+0 1 0 1 
+1 1 1 0 
+1 1 1 1 
+
+traversal : 3 1
+unblocking 3 1
+1
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+
+blocking 3 2
+1
+0 0 1 0 
+1 0 1 0 
+0 1 1 1 
+1 1 1 1 
+
+traversal : 3 2
+unblocking 3 2
+1
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+
+blocking 3 3
+1
+1 0 0 1 
+0 1 0 1 
+0 0 1 1 
+1 1 1 1 
+
+traversal : 3 3
+unblocking 3 3
+1
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+0 0 0 0 
+2
