@@ -17,7 +17,7 @@ int main()
     for(int i = 1; i < len; i++)
     {
         if(str[i] != '0')
-        {
+        {\
             dp[i+1] += dp[i];
         }
         dp[i+1] = dp[i+1] % 1000000;
