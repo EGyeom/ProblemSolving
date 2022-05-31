@@ -3,7 +3,7 @@ using namespace std;
 #define abs(X) (X) < 0 ? (-(X)) : (X)
 unordered_map<char,bool> brokens;
 
-char func(string& temp, string& subN, int sign)
+char func(string& temp, string& subN)
 {
     char c;
     if(temp < subN)
@@ -28,11 +28,11 @@ char func(string& temp, string& subN, int sign)
     {
         if(brokens.find(subN.back()) != brokens.end())
         {
-            while(brokens.find())
+            
         }
         else
         {
-            
+            temp.push_back(subN.back());
         }
     }
     
@@ -60,6 +60,6 @@ int main()
     for(int i =0; i < n.size(); i++)
     {
         subN.push_back(n[i]);
-        func(temp,subN,0);
+        func(temp,subN);
     }
 }
