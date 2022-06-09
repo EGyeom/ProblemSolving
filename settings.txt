@@ -1,0 +1,1 @@
+alias makefolder='source /backup/save/ProblemSolving/makeFolder.sh'
