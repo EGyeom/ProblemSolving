@@ -1,9 +1,13 @@
 #! /bin/bash
 
 # Get answer
+user=$(whoami)
 
-path="/backup/save/ProblemSolving"
-
+if [ ${user} == "gyeom" ]
+then path="/home/gyeom/study/ps"
+else path="/backup/save/ProblemSolving"
+fi
+echo ${path}
 if [ "$1" -a "$2" ]
 then
     folder=$1
