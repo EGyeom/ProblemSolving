@@ -3,6 +3,7 @@ using namespace std;
 
 int sdoku[9][9];
 int checkCount;
+bool isFind = false;
 void print_sdoku()
 {
     printf("\n");
@@ -19,7 +20,6 @@ void print_sdoku()
 
 bool check(int y, int x)
 {
-    checkCount++;
     for(int i = 0; i < 9; i++)
     {
         if(i != y && sdoku[i][x] == sdoku[y][x]) return false;
@@ -27,34 +27,47 @@ bool check(int y, int x)
     }
     int y3 = y/3;
     int x3 = x/3;
-    for(int i =y3; i < y3+3; i++)
+    for(int i =y3*3; i < y3*3+3; i++)
     {
-        for(int j = x3; j < x3+3; j++)
+        for(int j = x3*3; j < x3*3+3; j++)
         {
             if(i != y && j != x && sdoku[i][j] == sdoku[y][x]) return false;
         }
     }
-    checkCount = 0;
     return true;
 }
 
-int findZero(int y)
-{
-    for(int j =0; j < 9; j++)
-    {
-        if(sdoku[y][j] == 0) return j;
-    }
-    return -1;
-}
 
 void traverse(int y, int x)
 {
-    while(findZero(y) = -1)
-    for(int j = 1; j <= 9; j++)
+    int zero_y = y;
+    int zero_x = x;
+    while(sdoku[zero_y][zero_x] != 0)
     {
-
+        zero_x++;
+        if(zero_x == 9)
+        {
+            zero_x = 0;
+            zero_y++;
+            if(zero_y == 9) 
+            {
+                isFind =true;
+                return;
+            }
+        }
     }
-
+    printf("%d %d\n", zero_y, zero_x);
+    for(int i = 1; i <= 9; i++)
+    {
+        sdoku[zero_y][zero_x] = i;
+        if(check(zero_y,zero_x))
+        {
+            print_sdoku();
+            traverse(zero_y,zero_x);
+            if(isFind == true) return;
+        }
+    }
+    sdoku[zero_y][zero_x] = 0;
 }
 
 
@@ -67,8 +80,8 @@ int main()
             scanf("%d",&sdoku[i][j]);
         }
     }
-    traverse(0,0);
     printf("\n");
+    traverse(0,0);
     print_sdoku();
 
 }
