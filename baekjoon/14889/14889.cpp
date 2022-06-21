@@ -1,53 +1,45 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int ret = INT_MAX;
 int n;
-int teamCount = 0;
-vector<vector<int>> v;
-vector<bool> visited;
-vector<int> t_stark;
+int ret = INT_MAX;
+int abilities[21][21];
+bool visited[21];
 
-void dfs(int pos)
+void dfs(int num, int pos)
 {
-    if(pos >= n) return;
-    if((teamCount == n/2))
+    if(num == n /2)
     {
-        for(int i =0; i < teamCount; i++)
+        int stark = 0, link = 0;
+        for(int i = 1 ; i <= n; i++)
         {
-            
+            for(int j = 1; j <=n; j++)
+            {
+                if(visited[i] && visited[j]) stark += (abilities[i][j]);
+                else if(!visited[i] && !visited[j]) link += (abilities[i][j]);
+            }
         }
-        return;
+        ret = min(ret, abs(stark-link));
+        return ;
     }
-    for(int i =pos+1; i <n; i++)
+    for(int i = pos; i <= n; i++)
     {
-        teamCount++;
-        t_stark.push_back(i);
-        dfs(pos+1);
-        t_stark.pop_back();
-        teamCount--;
+        visited[i] = true;
+        dfs(num+1,i+1);
+        visited[i] = false;
     }
-
 }
-
 
 int main()
 {
     scanf("%d", &n);
-    
-    for(int i =0; i < n; i++)
+    for(int i =1; i <= n ;i++)
     {
-        vector<int> vTemp;
-        for(int j = 0; j < n; j++)
+        for(int j = 1; j <= n; j++)
         {
-            int temp;
-            scanf("%d", &temp);
-            vTemp.push_back(temp);
+            scanf("%d", &abilities[i][j]);
         }
-        vTemp.clear();
     }
-    t_stark.push_back(0);
-    teamCount = 1;
-    dfs(0);
+    dfs(0,1);
     printf("%d\n", ret);
 }
