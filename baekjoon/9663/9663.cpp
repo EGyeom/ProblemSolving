@@ -1,3 +1,6 @@
+
+// asnwer
+/* 
 #include <psinclude.h>
 #include <unistd.h>
 
@@ -131,10 +134,47 @@ int main()
 
     traversal(0);
     printf("%d\n", result);
+} */
+
+
+#include <bits/stdc++.h>
+
+int chess[16];
+int n;
+int ret;
+
+bool check(int level)
+{
+    for(int i = 0; i < level; i++)
+    {
+        if(chess[level] == chess[i] || abs(chess[level] - chess[i]) == abs(level - i))
+        {
+            return false;
+        }
+        else continue; 
+    }
+    return true;
 }
 
+void travals(int num)
+{
+    if(num == n) { ret++; return; }
+    for(int i =0; i < n; i++)
+    {
+            chess[num] = i;
+            if(check(num))
+            {
+                travals(num+1);
+            }
+    }
+}
 
-
+int main()
+{
+    scanf("%d", &n);
+    travals(0);
+    printf("%d\n", ret);
+}
 
 
 // #include <psinclude.h>

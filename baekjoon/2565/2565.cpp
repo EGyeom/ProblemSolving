@@ -16,6 +16,11 @@ using namespace std;
 int dp[101];
 int arr[101][2];
 
+bool compare(int*& a, int*& b)
+{
+    return a[0] < b[0];
+}
+
 int main()
 {
     int n;
@@ -24,20 +29,12 @@ int main()
     {
         scanf("%d %d", &arr[i][0], &arr[i][1]);
     }
-
-    for(int i = 2; i <=n; i++)
-    {
-        for(int j = 1; j < i; j++)
-        {
-            if(arr[i][0] > arr[j][0] && arr[i][1] < arr[j][1])
-            {
-                dp[j]++;
-            }
-        }
-    }
+    
+    sort(arr+1, arr+n+1);
 
     for(int i =1; i <=n; i++)
     {
-        printf("%d\n", dp[i]);
+        printf("%d %d\n", arr[i][0], arr[i][1]);
     }
+
 }
