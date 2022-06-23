@@ -14,27 +14,31 @@ using namespace std;
 예제 출력 1 
 3 */
 int dp[101];
-int arr[101][2];
-
-bool compare(int*& a, int*& b)
-{
-    return a[0] < b[0];
-}
+vector<vector<int>> v(100,vector<int>(2,0));
 
 int main()
 {
     int n;
     scanf("%d", &n);
-    for(int i =1; i <=n; i++)
+    for(int i =0; i <n; i++)
     {
-        scanf("%d %d", &arr[i][0], &arr[i][1]);
+        scanf("%d %d", &v[i][0], &v[i][1]);
+        dp[i] = 1;
     }
     
-    sort(arr+1, arr+n+1);
+    sort(v.begin(), v.begin()+n);
 
-    for(int i =1; i <=n; i++)
+    int ret = 0;
+    for(int i =1; i <n; i++)
     {
-        printf("%d %d\n", arr[i][0], arr[i][1]);
+        for(int j = i-1; j >= 0; j--)
+        {
+            if(v[i][1] > v[j][1] && dp[i] <= dp[j])
+            {
+                dp[i] = dp[j] +1;
+                if(ret < dp[i]) ret = dp[i];
+            }
+        }
     }
-
+    printf("%d\n", n - ret);
 }

@@ -30,7 +30,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int dp[301];
+int dp[301][2];
 // 0 - 1칸
 // 1 - 2칸
 
@@ -38,18 +38,21 @@ int main()
 {
     int n;
     scanf("%d", &n);
-
+    int ret = 0;
     for(int i =1; i <=n; i++)
     {
-        scanf("%d", &dp[i]);
+        scanf("%d", &dp[i][0]);
+        dp[i][1] = dp[i][0];
     }
+    dp[2][1] += dp[1][0];
 
-    for(int i = 2; i <= n; i++)
+    for(int i = 3; i <= n; i++)
     {
-        
+        dp[i][1] = max(dp[i-2][1],dp[i-3][1]+dp[i-1][0]) + dp[i][0];
+        ret = max(ret,dp[i][1]);
     }
 
-    printf("%d\n", dp[n]);
+    printf("%d\n", ret);
 }
 
 /* int main()

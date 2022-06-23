@@ -16,45 +16,27 @@
 출력
 한 줄에 배낭에 넣을 수 있는 물건들의 가치합의 최댓값을 출력한다.
 
-예제 입력 1 
+예제 입력 1
 4 7
 6 13
 4 8
 3 6
 5 12
-예제 출력 1 
+예제 출력 1
 14 */
 
-#include <iostream>
-#include <map>
-#include <vector>
-#include <utility>
-#include <cstdio>
-int * test(void)
-{
-    int * check = new int[5];
-    for(int i =0; i < 5; i++)
-    {
-        check[i] = i;
-    }
+#include <bits/stdc++.h>
+using namespace std;
 
-    return check;
-}
-
+int dp[100001];
 int main()
 {
-    // std::vector<int, int> input_vector;
-    // int n, k;
-    // scanf("%d %d", &n, &k);
-    // for(int i =0; i < n ; i++)
-    // {
-    //     int temp_k, value
-    //     input_vector.push_back(std::make_pair())
-    // }
-    int * check = test();
-    for(int i =0; i <5; i++)
+    int n,k;
+    scanf("%d %d", &n, &k);
+
+    for(int i =0; i < n; i++)
     {
-        printf("%d\n",check[i]);
+        
     }
 
 }
