@@ -22,7 +22,7 @@ dfs(V, E, R) {  # V : 정점 집합, E : 간선 집합, R : 시작 정점
 첫째 줄부터 N개의 줄에 정수를 한 개씩 출력한다. i번째 줄에는 정점 i의 방문 순서를 출력한다. 시작 정점의 방문 순서는 1이다. 시작 정점에서 방문할 수 없는 경우 0을 출력한다.
 
 예제 입력 1 
-5 5 1
+5 5 2
 1 4
 1 2
 2 3
@@ -41,10 +41,11 @@ using namespace std;
 int n,m,r;
 int gOrder = 1;
 vector<int> visited(100001,0);
-vector<vector<int>> arr(100001,vector<int>(0));
+vector<vector<int>> arr(100001,vector<int>());
 
 void dfs(int index)
 {
+    
     visited[index] = gOrder++;
 
     for(int& val : arr[index])
@@ -66,11 +67,12 @@ int main()
         arr[v].push_back(u);
     }
 
-    for(int i = 1; i <= m; i++)
+    for(vector<int>& iter : arr)
     {
-        sort(arr[i].begin(), arr[i].end());
+        sort(iter.begin(), iter.end());
     }
-   dfs(r);
+    
+    dfs(r);
 
     for(int i =1; i <= n; i++)
     {
