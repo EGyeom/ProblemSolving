@@ -2,7 +2,7 @@
 using namespace std;
 
 
-#define INPUTMAX 32000
+#define INPUTMAX 32001
 
 int input;
 stack<int> st;

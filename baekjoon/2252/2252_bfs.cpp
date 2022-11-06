@@ -4,29 +4,28 @@
 using namespace std;
 
 #define INPUTMAX 32001
-
 int input;
 vector<int> edgeInfo[INPUTMAX],inDegree(INPUTMAX,0);
 
 void topologySort(vector<int> indegree)
 {
-	queue<int> q;
+    queue<int> q;
     
     for(int i = 1; i <= input; i++)
     {
-    	if(inDegree[i] == 0)
-        	q.push(i);
+        if(inDegree[i] == 0)
+            q.push(i);
     }
 
-	while(q.empty() == false)
+    while(q.empty() == false)
     {   
-    	int front = q.front();
+        int front = q.front();
         q.pop();
         cout << front << " ";
         for(int& edge : edgeInfo[front])
         {
-        	if(--inDegree[edge] == 0)
-            	q.push(edge);
+            if(--inDegree[edge] == 0)
+                q.push(edge);
         }
     }
 }
