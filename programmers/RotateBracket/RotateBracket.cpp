@@ -7,7 +7,6 @@ int solution(string s) {
     int answer = 0;
     vector<char> v;
     int sSize = s.size();
-    bool isBreak = false;
     for(int j = 0 ; j < sSize; j++)
     {
         for(int i = j ; i < sSize + j; i++)
@@ -27,12 +26,11 @@ int solution(string s) {
             }
             else
             {
-                isBreak = true;
+                v.push_back(s[i]);
                 break;
             }
         }
-        if(isBreak == false && v.empty()) answer++;
-        isBreak = false;
+        if(v.empty()) answer++;
         v.clear();
         s += s[j];
     }
