@@ -32,3 +32,38 @@ public:
         return s;
     }
 };
+
+
+/*
+ Problem review
+class Solution {
+public:
+    string makeFancyString(string s) {
+        string answer = "";
+        int cnt = 0;
+
+        for(char c : s)
+        {  
+            if(answer.empty())
+            {
+                answer += c;
+                continue;
+            }
+
+            if(answer.back() != c)
+            {
+                answer += c;
+                cnt = 0;
+            }
+            else
+            {
+                cnt++;
+                if(cnt >= 2) 
+                    continue;
+                else answer += c;
+            }
+        }
+        return answer;
+    }
+};
+ */
