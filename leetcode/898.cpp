@@ -1,4 +1,4 @@
-class Solution {
+/*class Solution {
 public:
     void dfs(vector<int>& arr, set<int>& s, int idx, int sum, vector<bool>& ischecked)
     {
@@ -59,5 +59,28 @@ public:
         }
 
         return result.size();
+    }
+};
+
+*/
+
+class Solution {
+public:
+    int subarrayBitwiseORs(vector<int>& arr) {
+        unordered_set<int> current, answer;
+
+        for(int i = 0 ; i < arr.size(); i++)
+        {
+            unordered_set<int> next{arr[i]};
+
+            for(int num : current)
+            {
+                next.insert(num | arr[i]);
+            }
+
+            current = next;
+            answer.insert(next.begin(), next.end());
+        }
+        return answer.size();
     }
 };
