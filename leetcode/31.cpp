@@ -44,33 +44,32 @@ public:
         return;
     }
 };
-
-
+// revised version
 class Solution {
 public:
-    void solve(vector<int>& nums){
-        int n = nums.size();
-        int i = n - 2;
-
-        // first finding pivot index
-
-        while(i>=0 && nums[i] >= nums[i+1]){
-            i--;
-        }
-        //find the j that is must larger than the i
-
-        if(i>=0){
-            int j = n-1;
-            while(nums[i] >= nums[j]){
-                j--;
-            }
-            swap(nums[i],nums[j]);
-        }
-        
-        //step 3: reveserse the array
-        reverse(nums.begin()+i+1,nums.end());
-    }
     void nextPermutation(vector<int>& nums) {
-        solve(nums);
+        int n = nums.size();
+        int idx = 0;
+        int minVal = 101;
+        int r = n-2;
+        while(r > -1 && nums[r] >= nums[r+1]) r--; 
+
+        if(r > -1)
+        {
+            for(int i = n-1; i > r; i--)
+            {
+                if(nums[r] < nums[i])
+                {
+                    if(minVal > nums[i])
+                    {
+                        minVal = nums[i];
+                        idx = i;
+                    }
+                }
+            }
+            swap(nums[idx], nums[r]);
+        }
+
+        reverse(nums.begin()+r+1, nums.end());
     }
 };
